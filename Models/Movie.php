@@ -5,15 +5,15 @@ include __DIR__ . '/Genre.php';
 class Movie
 {
   public
-    $title, $poster, $duration, $language, $genre;
+    $title, $poster, $duration, $language, $genres;
 
-  public function __construct(string $title = '', string $poster = '', int $duration = 90, string $language = 'en', Genre $genre)
+  public function __construct(string $title = '', string $poster = '', int $duration = 90, string $language = 'en', array $genres)
   {
     $this->title = $title;
     $this->poster = $poster;
     $this->duration = $duration;
     $this->language = $language;
-    $this->genre = $genre;
+    $this->genres = $genres;
   }
 
   public function getDetails()
